@@ -30,5 +30,5 @@ Step 2 - Run the file
 
 - You can type the below command in the shell.
 ```python
-python3 nonstandardcode.py
+python nonstandardcode.py
 ```
