@@ -106,6 +106,7 @@ housing_tr["population_per_household"] = (
 housing_cat = housing[["ocean_proximity"]]
 housing_prepared = housing_tr.join(pd.get_dummies(housing_cat, drop_first=True))
 
+
 lin_reg = LinearRegression()
 lin_reg.fit(housing_prepared, housing_labels)
 
