@@ -1,3 +1,7 @@
 *.pyc
 *.csv
 *.tgz
+data/*
+logs/*
+!logs/.gitkeep
+artifacts/*
