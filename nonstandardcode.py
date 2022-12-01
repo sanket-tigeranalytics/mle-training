@@ -18,8 +18,8 @@ from sklearn.model_selection import (
 from sklearn.tree import DecisionTreeRegressor
 
 DOWNLOAD_ROOT = "https://raw.githubusercontent.com/ageron/handson-ml/master/"
-HOUSING_PATH = os.path.join("datasets", "housing")
-HOUSING_URL = DOWNLOAD_ROOT + "datasets/housing/housing.tgz"
+HOUSING_PATH = os.path.join("data", "raw")
+HOUSING_URL = DOWNLOAD_ROOT + "data/raw/housing.tgz"
 
 
 def fetch_housing_data(housing_url=HOUSING_URL, housing_path=HOUSING_PATH):
@@ -40,7 +40,6 @@ fetch_housing_data()
 housing = load_housing_data()
 
 
-train_set, test_set = train_test_split(housing, test_size=0.2, random_state=42)
 housing["income_cat"] = pd.cut(
     housing["median_income"],
     bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf],
